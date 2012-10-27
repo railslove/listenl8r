@@ -1,0 +1,14 @@
+!!! 5
+- html_tag class: 'no-js', lang: 'en' do
+  = render 'head'
+
+  %body{ class: "controller-#{ controller.controller_name } action-#{ controller.action_name }" }
+
+    #container
+      = render 'header'
+      = render 'flashes'
+      #main{ role: 'main' }
+        .content
+          = yield
+
+      = render 'footer'

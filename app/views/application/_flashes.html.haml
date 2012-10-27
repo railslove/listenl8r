@@ -1,0 +1,6 @@
+#flashes
+  - flash.each do |key, value|
+    .alert{class: "alert-#{key}", title: key.to_s.humanize}
+      %p
+        = value
+    %br
