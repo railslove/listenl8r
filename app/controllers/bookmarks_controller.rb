@@ -7,7 +7,7 @@ class BookmarksController < ApplicationController
 
     respond_to do |format|
       if @bookmark.save
-        format.html { redirect_to feed_url(@bookmark.feed), notice: 'Successfully added this file to your feed.' }
+        format.html { redirect_to feed_url(@bookmark.feed) }
       else
         format.html { redirect_to feed_url(@bookmark.feed), alert: 'A file URL could be very helpful here... ;)' }
       end

@@ -1,8 +1,8 @@
-= form_for Bookmark.new, :url => feed_bookmarks_path(@feed), :html => {:class => "form-horizontal"} do |f|
+= form_for Bookmark.new, :url => feed_bookmarks_path(@feed) do |f|
   .control-group
-    = f.label :title, "File Title", :class => "control-label"
+    = f.label :title, "File Title (optional)", :class => "control-label"
     .controls
-      = f.text_field :title, :placeholder => "Podcast Episode 23 (optional)"
+      = f.text_field :title, :placeholder => "Example Podcast, Episode 23 — May 18, 2012"
   .control-group
     = f.label :location, "File URL", :class => "control-label"
     .controls
@@ -12,10 +12,17 @@
       %button.btn{:type => "submit"} Add to feed
 
 - if @bookmarks.any?
-  %hr
-  %ul
-    - @bookmarks.each do |bookmark|
-      %li
-        = bookmark.title
-        &mdash;
-        = link_to bookmark.location, bookmark.location
+  %table.table.table-striped.table-condensed
+    %thead
+      %tr
+        %th Added
+        %th Title
+        %th URL
+        %th
+    %tbody
+      - @bookmarks.each do |bookmark|
+        %tr
+          %td= l bookmark.created_at, :format => :short
+          %td= bookmark.title
+          %td= link_to bookmark.location, bookmark.location
+          %td= button_to "remove", feed_bookmark_path(@feed, bookmark), :method => :delete, :class => "btn btn-danger btn-mini"
