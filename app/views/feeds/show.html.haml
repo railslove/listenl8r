@@ -1,12 +1,12 @@
 = form_for Bookmark.new, :url => feed_bookmarks_path(@feed) do |f|
   .control-group
-    = f.label :title, "File Title (optional)", :class => "control-label"
-    .controls
-      = f.text_field :title, :placeholder => "Example Podcast, Episode 23 — May 18, 2012"
-  .control-group
     = f.label :location, "File URL", :class => "control-label"
     .controls
       = f.text_field :location, :placeholder => "http://example.com/podcast.mp3"
+  .control-group
+    = f.label :title, "File Title (optional)", :class => "control-label"
+    .controls
+      = f.text_field :title, :placeholder => "Example Podcast, Episode 23 — May 18, 2012"
   .control-group
     .controls
       %button.btn{:type => "submit"} Add to feed
