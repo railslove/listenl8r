@@ -2,7 +2,7 @@ class FeedsController < ApplicationController
 
   def show
     @feed = Feed.find(params[:id])
-    @bookmarks = @feed.bookmarks
+    @bookmarks = @feed.bookmarks.reverse
 
     respond_to do |format|
       format.html
