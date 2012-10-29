@@ -4,7 +4,6 @@
   });
 = form_for Bookmark.new, url: feed_bookmarks_path(@feed) do |f|
   .control-group
-    = f.label :location, "File URL", class: "control-label"
     .controls
       = f.text_field :location, placeholder: "http://example.com/podcast.mp3", class: "input-xxlarge location"
   .control-group#title_group
