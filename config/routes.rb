@@ -4,6 +4,6 @@ Listenlater::Application.routes.draw do
     resources :bookmarks
   end
 
-  root :to => "feeds#new"
+  root to: "feeds#new"
 
 end

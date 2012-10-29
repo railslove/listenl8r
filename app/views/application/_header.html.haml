@@ -1,7 +1,7 @@
 %header
   - if @feed && !@feed.new_record?
     %h1
-      = link_to "this is your listen l8r feed", feed_url(@feed, :format => "atom")
+      = link_to "this is your listen l8r feed", feed_url(@feed, format: "atom")
     %p
       Add audio files from the web &mdash; and listen l8r.
   - else
