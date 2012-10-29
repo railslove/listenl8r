@@ -1,20 +1,7 @@
-//
-// This is a manifest file that'll be compiled into application.css, which will include all the files
-// listed below.
-//
-// Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
-// or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
-//
-// You're free to add application-wide styles to this file and they'll appear at the top of the
-// compiled file, but it's generally better to create a new file per style scope.
-//
-//= require_self
-//
-//-----------------------------------------
-// Compass libraries and extensions
-//-----------------------------------------
+@charset "UTF-8"
 
 @import bootstrap
+@import compass/css3/images
 
 $width: 730px
 
@@ -36,27 +23,42 @@ form
 
 footer
   position: fixed
-  bottom: 30px
-  background: #fff
+  bottom: 0
+  height: 60px
   width: $width
-  span
-    padding-left: 20px
+  background: rgba(255,255,255,1)
+  padding-top: 10px
+  &:before
+    content: ""
+    display: block
+    position: fixed
+    width: $width
+    height: 40px
+    bottom: 70px
+    @include background(linear-gradient(rgba(255,255,255,0.0), rgba(255,255,255,1)))
+  p.centered
+    text-align: center
     a
-      color: #666
+      color: #999
 
 h1.logo
   position: absolute
   top: 50%
   left: 50%
   width: $width
-  height: 100px
+  height: 200px
   margin-left: -1 * $width/2
   margin-top: -100px
-  img
-    float: left
-    margin-right: 40px
-  form
-    padding-top: 15px
+  text-align: center
+
+button.btn.btn-danger.btn-large
+  position: absolute
+  top: 50%
+  left: 50%
+  width: 300px
+  height: 50px
+  margin-left: -150px
+  margin-top: -25px
 
 #title_group
   display: none
