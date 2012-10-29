@@ -16,8 +16,10 @@
 
 @import bootstrap
 
+$width: 800px
+
 #container
-  width: 800px
+  width: $width
   margin: 30px auto
   padding-bottom: 30px
 
@@ -36,7 +38,7 @@ footer
   position: fixed
   bottom: 30px
   background: #fff
-  width: 800px
+  width: $width
   span
     padding-left: 20px
     a
@@ -46,9 +48,9 @@ h1.logo
   position: absolute
   top: 50%
   left: 50%
-  width: 800px
+  width: $width
   height: 100px
-  margin-left: -400px
+  margin-left: -1 * $width/2
   margin-top: -100px
   img
     float: left
