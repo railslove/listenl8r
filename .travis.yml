@@ -3,5 +3,6 @@ rvm:
   - 1.9.2
   - 1.9.3
 before_script:
+  - "cp config/database.yml.travis config/database.yml"
   - "rake db:create"
   - "rake db:migrate"
