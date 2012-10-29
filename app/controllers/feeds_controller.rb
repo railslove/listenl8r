@@ -23,7 +23,7 @@ class FeedsController < ApplicationController
 
     respond_to do |format|
       if @feed.save
-        format.html { redirect_to @feed, notice: 'Your feed was successfully created. Now start adding audio files.' }
+        format.html { redirect_to @feed }
       else
         format.html { render action: "new" }
       end

@@ -1,3 +1,6 @@
-= form_for @feed do |f|
-  = f.submit 'Create your private podcast feed', class: "btn btn-danger"
-  , add audio files from the web &mdash; and listen l8r.
+%h1.logo
+  = image_tag "listenl8r.png"
+  = form_for @feed do |f|
+    %button.btn.btn-danger.btn-large{type: "submit"}
+      %i.icon-music.icon-white
+      Create your private podcast feed

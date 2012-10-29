@@ -1,10 +1,8 @@
 %header
   - if @feed && !@feed.new_record?
-    %h1
-      = link_to "this is your listen l8r feed", feed_url(@feed, format: "atom")
-    %p
-      Add audio files from the web &mdash; and listen l8r.
-  - else
-    %h1
-      listen l8r
-%hr
+    %h1= image_tag "listenl8r.png"
+    %h2
+      = link_to("This is your listen l8r feed", feed_url(@feed, format: "atom")) + "."
+      %br
+      Add audio files from the web &mdash; and start listening l8r.
+    %hr
