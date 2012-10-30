@@ -7,6 +7,7 @@ gem 'postgres_ext'
 gem "haml-rails"
 gem 'jquery-rails'
 gem 'html5-rails'
+gem 'airbrake'
 
 # Gems used only for assets and not required
 # in production environments by default.
