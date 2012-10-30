@@ -3,7 +3,7 @@
 
 # ![listen l8r](https://raw.github.com/railslove/listenl8r/master/app/assets/images/listenl8888r.png)
 
-listen l8r is a great way to bookmark audio files on the web.
+listen l8r is a great way to bookmark audio files on the web.  
 Start your own private podcast feed, add audio files from the web and listen to them later.
 
 listen l8r is a small weekend project by [tmschndr](https://github.com/tmschndr), born to fix one of those little everday problems.
